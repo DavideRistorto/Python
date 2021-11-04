@@ -6,7 +6,7 @@ print(f"la prima lettera è: {word[0]} l'ultima lettera è: {word[-1]} ")
 print(word[1:-1])
 
 #stampa una lettera si e una no
-print(word[:-1:2])
+print(word[::2])
 
 #stampare parola invertita
 print(word[::-1])
