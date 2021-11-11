@@ -1,3 +1,4 @@
-#inserire un nome da tastiera e il primo carattere sostituirlo con *
+#inserire un nome da tastiera, stampare il primo carattere del nome i restanti sostituirli con *
 nome = str(input('inserisci il tuo nome: '))
-print('*' + nome[1:])
+num = len(nome)
+print(nome[0]+(num-1)*"*")
