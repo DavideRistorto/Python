@@ -1,9 +1,7 @@
 #data una lista di stringhe ricavare una lista con le stringhe palindrome
 # e un'altra con le stringhe che iniziano con una maiuscola
 
-listaString = ["ciao","Ciao","anna","AnnA","malayalam","Buonasera"]
-listaPalindrome = []
-listaMaiuscole = []
+listaString , listaPalindrome,listaMaiuscole= ["ciao","Ciao","anna","AnnA","malayalam","Buonasera"],[],[]
 
 for elemento in listaString:
     if elemento == elemento[::-1]:
