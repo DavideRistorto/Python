@@ -2,7 +2,6 @@
 import turtle
 
 tar = turtle.Turtle()
-tar.hideturtle()
 lati = int(input("inserisci il numero dei lati: "))
 gradi = (180*(lati-2))/lati
 temp = gradi-90
