@@ -1,4 +1,5 @@
 #FORZA 4 da terminale
+import os
 import numpy as np #implementare gli array
 campo = np.array([[' ',' ',' ',' ',' ',' ',' '],[' ',' ',' ',' ',' ',' ',' '],[' ',' ',' ',' ',' ',' ',' '],[' ',' ',' ',' ',' ',' ',' '],[' ',' ',' ',' ',' ',' ',' '],[' ',' ',' ',' ',' ',' ',' ']]) #campo/matrice 6*7
 indici = '  1 -  2 - 3 - 4 - 5 - 6 - 7'
@@ -22,11 +23,13 @@ def partita(campo,g1,g2):
         contaRighe = 5
         while messa == False and contaRighe>=0: #ciclo che continua finche la mossa non viene messa in campo
             if campo[contaRighe][posizione]==' ':
+                os.system('clear')
                 campo[contaRighe][posizione] = carattere
                 messa = True
             else:
                 contaRighe -=1
                 if(contaRighe == 0):    #controllo se la colonna è piena
+                    os.system('clear')
                     print("COLONNA PIENA! RINSERISCI\n")
                     contaMosse += 1   # la mossa viene annullata
                     
