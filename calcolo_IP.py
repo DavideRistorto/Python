@@ -6,15 +6,22 @@ def bin2dec(binario):
             pass
         if binario[k] == '1':
             convertito += 2 ** (len(binario) - k - 1)
-
     return convertito
 
 
 def dec2bin(num, nbit):
     convertito = bin(num)[2:]
     convertito ='0'*(nbit-len(convertito))+convertito
-
     return convertito
+
+
+def conversioneMask(mask):
+    striga = ""
+    striga = '1'*mask
+    rimaneti = 32-mask
+    striga += '0'*rimaneti
+    conversione = IP_bin2dec(striga)
+    print(f"la maschera di rete {conversione}")
 
 
 def IP_dec2bin(ipDec):
@@ -70,7 +77,6 @@ def calcoloPrimo(ip_rete):
     appoggio = conversione[:-1]+'1'
 
     return IP_bin2dec(appoggio)
-
 
 def calcoloUltimo(ip_broad):
     conversione = IP_dec2bin(ip_broad)
@@ -128,16 +134,16 @@ def main():
             errore = controlloIP(IP_rete,sub_mask)
             
 
-    print(f"la subnet mask è {sub_mask}")
+    conversioneMask(sub_mask)
 
     ipBrod = calcoloBroadcast(IP_rete,sub_mask)
-    print(f"IP di Broadcast: {ipBrod}")
-
     ipPrimo = calcoloPrimo(IP_rete)
-    print(f"il primo IP: {ipPrimo}")
-
     ipUltimo = calcoloUltimo(ipBrod)
+
+
+    print(f"il primo IP: {ipPrimo}")
     print(f"l' ultimo IP: {ipUltimo}")
+    print(f"IP di Broadcast: {ipBrod}")
 
     print(f"il numero di host disponibili è {calcoloNHost(sub_mask)}")
 
