@@ -3,7 +3,7 @@ def numeroPrimo( valore):
     divisore = 2
     primo = True  
     
-    while (divisore<=valore/2) & (primo==True):
+    while (divisore<=valore/2) & (primo==True):  
         if valore%divisore == 0:
             primo = False
         else:
