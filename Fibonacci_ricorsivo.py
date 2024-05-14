@@ -1,4 +1,4 @@
-#stampare i numeri della serie fi Fibonacci minori ad un numero dato
+#stampare i numeri della serie fi Fibonacci minori ad un numero dato 
 
 def fibonacci(num,a,b):
     if num > a:
