@@ -1,6 +1,6 @@
 #stampare su file i primi 100 numeri primi
 def numeroPrimo( valore):
-    divisore = 2
+    divisore = 2 
     primo = True  
     
     while (divisore<=valore/2) & (primo==True):  
